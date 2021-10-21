@@ -64,7 +64,7 @@ import plotly.express as px
 st.write("# Exploring structural brain MRI changes with Ageing")
 
 st.write("## Part 1: XGBoost Predictive Model")
-st.write("XBoost model is trained using T1 brain imaging features and the outcome is MOCA or MDS-UPDRSIII score. Since it is a continuous variable we converted into ordered classes and then trained a classification model. The analysis is done on 3D T1 MRI images from PPMI and ADNI cohorts. The average importance score and list of features used are at [link](https://github.com/anant-droid/brainMRIAgeing/tree/master/AvgFeatureImportance).")
+st.write("XBoost model is trained using T1 brain imaging features and the outcome is MOCA or MDS-UPDRSIII score. Since it is a continuous variable we converted into ordered classes and then trained a classification model. The analysis is done on 3D T1 MRI images from PPMI and ADNI cohorts. The average importance score and list of features used are at [link](https://drive.google.com/drive/folders/1vj2xGc8YB0RbJ-uBQ93QcYS0k2GQRP1b?usp=sharing).")
 cols = st.columns(2)
 cols[0].write('### MOCA Prediction Performance')
 cols[0].image('moca.png', width=450 )
