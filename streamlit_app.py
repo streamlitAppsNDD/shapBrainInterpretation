@@ -164,7 +164,7 @@ cols[1].plotly_chart( plot_plotly_slice(slice_number, axis_number=axis_number)  
 all_images = os.listdir('my_image_progression')
 
 st.write("### Visualize Feature Importance Score (brain regions)")
-cols = st.columns(4)
+cols = st.columns(3)
 list_prediction_tasks = ['GPU_MOCA_3GROUPS_PREDICTION', 'GPU_MDS-UPDRSPartIII_2GROUPS_PREDICTION' ]# 'GPU_DIAGNOSIS_PREDICTION']
 # list_prediction_tasks = list(set([col.split('&')[0] for col in all_images]))
 show_actual = {
@@ -203,7 +203,7 @@ norm_axis = {
     # "Z-score Normalize Cross-Sectional": f"{prediction_task}&{group}&{shap_values_type}_norm_axis1.png" 	
 }
 
-normalization = cols[3].selectbox('Select the normalization type', list(norm_axis.keys()))
+normalization = 'Unnormalized'# cols[3].selectbox('Select the normalization type', list(norm_axis.keys()))
 normalization = norm_axis[normalization]
 
 
