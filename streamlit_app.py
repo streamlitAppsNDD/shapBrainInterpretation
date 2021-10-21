@@ -247,7 +247,6 @@ def get_data(prediction_task, group):
     g = list(A.groupby([group]))
     return g, all_feature_list
 
-st.write(group)
 cols = st.columns(2)
 g, all_feature_list = get_data(prediction_task, group)
 cols[0].write("### Feature Value Visualization")
