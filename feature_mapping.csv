@@ -1,0 +1,89 @@
+region_name,region_index,symbol
+4th ventricle,15,4V
+BrainStem,16,B
+CSF,24,C
+cerebellar vermal lobules I-V,630,CVLI
+cerebellar vermal lobules VI-VII,631,CVLV
+cerebellar vermal lobules VIII-X,632,CVLV
+left amygdala,18,LA
+left caudal anterior cingulate,1002,LCAC
+left caudal middle frontal,1003,LCMF
+left caudate,11,LC
+left cerebellem exterior,6,LCE
+left cerebellum white matter,7,LCWM
+left cuneus,1005,LC
+left entorhinal,1006,LE
+left fusiform,1007,LF
+left hippocampus,17,LH
+left inferior parietal,1008,LIP
+left inferior temporal,1009,LIT
+left insula,1035,LI
+left isthmus cingulate,1010,LIC
+left lateral occipital,1011,LLO
+left lateral orbitofrontal,1012,LLO
+left lateral ventricle,4,LLV
+left lingual,1013,LL
+left medial orbitofrontal,1014,LMO
+left middle temporal,1015,LMT
+left pallidium,13,LP
+left paracentral,1017,LP
+left parahippocampal,1016,LP
+left pars opercularis,1018,LPO
+left pars orbitalis,1019,LPO
+left pars triangularis,1020,LPT
+left pericalcarine,1021,LP
+left postcentral,1022,LP
+left posterior cingulate,1023,LPC
+left precentral,1024,LP
+left precuneus,1025,LP
+left putamen,12,LP
+left rostral anterior cingulate,1026,LRAC
+left rostral middle frontal,1027,LRMF
+left superior frontal,1028,LSF
+left superior parietal,1029,LSP
+left superior temporal,1030,LST
+left supramarginal,1031,LS
+left thalamus proper,10,LTP
+left transverse temporal,1034,LTT
+left ventral DC,28,LVD
+right amygdala,54,RA
+right caudal anterior cingulate,2002,RCAC
+right caudal middle frontal,2003,RCMF
+right caudate,50,RC
+right cerebellum exterior,45,RCE
+right cerebellum white matter,46,RCWM
+right cuneus,2005,RC
+right entorhinal,2006,RE
+right fusiform,2007,RF
+right hippocampus,53,RH
+right inferior parietal,2008,RIP
+right inferior temporal,2009,RIT
+right insula,2035,RI
+right isthmus cingulate,2010,RIC
+right lateral occipital,2011,RLO
+right lateral orbitofrontal,2012,RLO
+right lateral ventricle,43,RLV
+right lingual,2013,RL
+right medial orbitofrontal,2014,RMO
+right middle temporal,2015,RMT
+right palladium,52,RP
+right paracentral,2017,RP
+right parahippocampal,2016,RP
+right pars opercularis,2018,RPO
+right pars orbitalis,2019,RPO
+right pars triangularis,2020,RPT
+right pericalcarine,2021,RP
+right postcentral,2022,RP
+right posterior cingulate,2023,RPC
+right precentral,2024,RP
+right precuneus,2025,RP
+right putamen,51,RP
+right rostral anterior cingulate,2026,RRAC
+right rostral middle frontal,2027,RRMF
+right superior frontal,2028,RSF
+right superior parietal,2029,RSP
+right superior temporal,2030,RST
+right supramarginal,2031,RS
+right thalamus proper,49,RTP
+right transverse temporal,2034,RTT
+right ventral DC,60,RVD
