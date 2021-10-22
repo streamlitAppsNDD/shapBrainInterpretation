@@ -186,7 +186,7 @@ group = cols[1].selectbox('Select the groupby feature', list(groups.keys()))
 group = groups[group] 
 
 shap_values_type_dict = {
-    'adjusted value (adjusting for risk)' : 'relativemean_mean_df',
+    'adjusted value (adjusting for risk across groups)' : 'relativemean_mean_df',
     'raw value' : 'mean_mean_df',
 }
 shap_values_type = cols[2].selectbox('Select the SHAP value type', list(shap_values_type_dict.keys()))
@@ -216,8 +216,8 @@ normalization = norm_axis[normalization]
 image_name = f"my_image_progression/{normalization}" 
 
 st.image(image_name, use_column_width=True)
-
-
+st.write('***Note***: In the figure above,  *higher valued (red color)* feature indicates that this feature causes larger increase in predicted probability towards the worse outcome (lower MOCA / higher UPDRS) as compared to features having *lower value (blue color)*.')
+st.write('---')
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.pyplot as plt
