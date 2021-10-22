@@ -243,6 +243,7 @@ def get_data(prediction_task, group):
     # Z['SELECT'] = ['A'] * len(Z)
     Z = pd.read_parquet('imaging_data.gziprs')
     A = Z.dropna(subset=[prediction_task, 'AGE'])
+    A['AGE_6GROUPS'] = list(pd.qcut(A['AGE'], 6, retbins=True, precision=0, duplicates='drop')[0].map(lambda i: f"{(int(i.left))}-{(int(i.right))}"))
     all_feature_list = Z.columns[Z.columns.str.contains('InvicroT1@')]
     g = list(A.groupby([group]))
     return g, all_feature_list
@@ -262,13 +263,15 @@ r_feature_mapping = {j:i for i,j in feature_mapping_actual.items()}
 # plt.rcParams.update({'font.size': 6})
 
 # fig, axs = plt.subplots(len(g), 1, squeeze=False, figsize=(8*len(g), 4.5*len(g)))
-st.write(len(g))
 # axslist = axs.reshape(-1)
 for i in range(len(g)):
-    fig, ax = plt.subplots(1, 1, figsize=(8, 4.5))
     K = g[i][1].copy()
+    if g[i][0] in ['GENPD', 'GENUN', 'SWEDD', 'PRODROMA']:
+        continue
+    if 'UPDRS' in prediction_task and g[i][0] == 'Control':
+        continue
+    fig, ax = plt.subplots(1, 1, figsize=(8, 4.5))
     K[prediction_task] = K[prediction_task].map(lambda x: x if x==classname else "Other")
-    K['AGE_6GROUPS'] = list(pd.qcut(K['AGE'], 6, retbins=True, precision=0, duplicates='drop')[0].map(lambda i: f"{(int(i.left))}-{(int(i.right))}"))
     K = K.dropna(subset=[prediction_task, feature, 'AGE_6GROUPS'])
     significanceComparisons = []
     for x in sorted(K['AGE_6GROUPS'].unique()):
