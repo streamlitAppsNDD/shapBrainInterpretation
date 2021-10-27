@@ -2,6 +2,10 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import sys
+import os
+
+sys.stdout = open(os.devnull, 'w')
 
 sns.set(context='notebook', style='ticks', font_scale=2, font='sans-serif',  rc={"lines.linewidth": 1.2})
 sns.set_style("white")
@@ -21,7 +25,6 @@ mpl.rcParams['xtick.color'] = COLOR
 mpl.rcParams['ytick.color'] = COLOR
 plt.rcParams.update({"savefig.format": 'png'})
 
-import os
 
 max_width = 1800
 padding_top = 10
